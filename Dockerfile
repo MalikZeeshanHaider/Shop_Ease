@@ -10,6 +10,6 @@ COPY . .
 ENTRYPOINT ["java", "-jar", "OrderService.jar"]
 FROM node:14
 WORKDIR /app
-COPY . .
+COPY target/OrderService-0.0.1-SNAPSHOT.jar OrderService.jar
 RUN npm install
 CMD ["node", "app.js"]
